@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+   *{
+      margin:0;
+      padding:0;
+      font-family: ROBOTO CONDENSED;
+      letter-spacing: 1px;
+    }
+    body{
+      background-image: url(bgimg.jpeg);
+      margin: 80px 150px;
+      background-position: center;
+      background-size: cover;
+     
+    }  
+    #main{
+      justify-content:space-between;
+     
+    }
+    #left{
+    
+    }
+    #right{
+      color:white;
+      padding:20px 45px;
+      font-size:20px;
+    }
+    .common{
+      background-color: rgb(0,0,0,0.5);
+      width:380px;
+      height: 400px;
+      outline:none;
+      align-items: center;
+      border-radius:15px;
+    }
+    .signup{
+      background-color:rgb(0,0,0,0.6);
+      color:grey;
+      text-align:center;
+      border-radius:15px 15px 0px 0px ;
+      height: 50px;
+      padding:5px 0px 5px 0px;
+    }
+    form {
+      padding:24px 80px;
+     }
+    input{
+      border-radius:10px;
+      padding:5px 35px;
+     }
+     button:hover{
+                background-color: black;
+                color:white;
+                transition:0.3s;
+     }
+    button{
+                background-color:#3BAF9F;
+                display:block;
+                text-align:center;
+                border-radius:12px;
+                border:2px solid #366473;
+                padding:10px 50px;
+                outline:none;
+                color:#f8efef;
+                cursor:pointer;
+                margin-top: 8px;
+               margin-left: 35px;
+                font-weight:600;
+            } 
+
+
+  </style>
+  <script language="JavaScript">
+    function showInput() {
+     var i1= document.getElementById("name").value;
+     var i2= document.getElementById("about").value;  
+     var i3= document.getElementById("address").value;
+     var i4= document.getElementById("phone").value;
+     var i5= document.getElementById("college").value;
+     document.getElementById('p1').innerHTML ="  "+ i1;
+     document.getElementById('p2').innerHTML = "  "+i2;
+     document.getElementById('p3').innerHTML ="  "+ i3;
+     document.getElementById('p4').innerHTML = "  "+i4;
+     document.getElementById('p5').innerHTML = "  "+i5;
+                    
+    }
+  </script>
+  <style>
+    #main{
+      display:flex;
+    }
+  </style>
+</head>
+
+<body>
+   <div id="main">
+    <div id="left" class="common">
+      <div class="signup">
+        <h1>WRITE YOUR DETAILS</h1>
+      </div>  
+  <form action="#" method="post" novalidate >
+   
+    <input type="text" placeholder="Name" id="name" name="name" required><br><br>
+    <input type="text" placeholder="About" id="about" name="about" required><br><br>
+    <input type="text" placeholder="Address" id="address" name="address" required><br><br>
+    <input type="number" placeholder="Phone no." id="phone" name="phone" required><br><br>
+    <input type="text" placeholder="College" id="college" name="college" required><br><br>
+    <button type="button" id="button"  onclick="showInput();">SUBMIT</button>
+  </form>
+  </div>
+
+  <div class="common">
+    <div class="signup">
+      <h1>YOUR DETAILS</h1>
+    </div> 
+    <div id="right">
+  <p>Name:<span id="p1"></span>
+    <br> <br>About:<span id="p2"></span>
+    <br><br>Address:<span id="p3"></span>
+    <br><br>Phone no.:<span id="p4"></span>
+    <br> <br>College:<span id="p5"></span>
+  </p>
+</div>
+  
+  </div>
+  </div>
+  </body>
+  </html> 
